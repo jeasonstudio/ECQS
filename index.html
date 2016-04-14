@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>北京科技大学|无课教室查询系统</title>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="asset/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+            <img src="asset/logo.png" class="ustblogo">
+        </div>
+        <div class="container">
+        <h2>北京科技大学<br/>无课教室查询系统</h2>
+        <div class="choose-container">
+            <div class="choose">
+                <form>
+                    <select id="classOne" onchange="changeweek()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
+                        <option value="1">第一周</option>
+                        <option value="2">第二周</option>
+                        <option value="3">第三周</option>
+                        <option value="4">第四周</option>
+                        <option value="5">第五周</option>
+                        <option value="6">第六周</option>
+                        <option value="7">第七周</option>
+                        <option value="8">第八周</option>
+                        <option value="9">第九周</option>
+                        <option value="10">第十周</option>
+                        <option value="11">第十一周</option>
+                        <option value="12">第十二周</option>
+                        <option value="13">第十三周</option>
+                        <option value="14">第十四周</option>
+                        <option value="15">第十五周</option>
+                        <option value="16">第十六周</option>
+                    </select>
+                    <select id="classTwo" onchange="changeday()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
+                        <option value="1">周一</option>
+                        <option value="2">周二</option>
+                        <option value="3">周三</option>
+                        <option value="4">周四</option>
+                        <option value="5">周五</option>
+                    </select>
+                </form>
+            </div>
+            <p>自习去哪儿：</p>
+            <div class="choose">
+                <form>
+                    <select id="class" onchange="change()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
+                        <option value="1" selected="selected">逸夫楼</option>
+                        <option value="2">教学楼</option>
+                        <option value="3">机电楼</option>
+                        <option value="4">外语楼</option>
+                        <option value="5">经管楼</option>
+                    </select>
+                    <button type="submit" id="button" class="btn btn-primary" style="display:block; margin: 50px auto;width: 50%;">选好了</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+<footer>
+    <p class="copyright"> &copy; 2016, insolently by <a href="http://www.abowloflrf.com" target="_blank" class="cpyright-link">abowloflrf</a> & <a href="http://jeasonstudio.github.io" target="_blank" class="cpyright-link">Jeason</a></p>
+</footer>
+<script type="text/javascript" src="asset/main.js" ></script>
+</html>
