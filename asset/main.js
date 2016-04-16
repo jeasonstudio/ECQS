@@ -58,14 +58,12 @@
         return (week-9);
     }
 
-    $("#button").bind("click",
-    function () {
+    $("#button").bind("click",function () {
         var week = $("#classOne").val();
         var day = $("#classTwo").val();
         var bulid = change();
         alert("你选的时间是第" + week + "周的周" + day + "，你选择的楼是" + bulid);
     });
-    
     
     $(document).ready(
         function ChangeTimeWhenReady() {

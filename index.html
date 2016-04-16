@@ -17,9 +17,8 @@
         <div class="container">
         <h2>北京科技大学<br/>无课教室查询系统</h2>
         <div class="choose-container">
-            <div class="choose">
-                <form>
-                    <select id="classOne" onchange="changeweek()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
+            <div class="choosewd">
+                    <select id="classOne" onchange="changeweek()" class="form-control" style="width: 40%; margin: auto;height:50px;font-size:20px;">
                         <option value="1">第一周</option>
                         <option value="2">第二周</option>
                         <option value="3">第三周</option>
@@ -37,14 +36,15 @@
                         <option value="15">第十五周</option>
                         <option value="16">第十六周</option>
                     </select>
-                    <select id="classTwo" onchange="changeday()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
+                    <select id="classTwo" onchange="changeday()" class="form-control" style="width: 40%; margin: auto;height:50px;font-size:20px;">
                         <option value="1">周一</option>
                         <option value="2">周二</option>
                         <option value="3">周三</option>
                         <option value="4">周四</option>
                         <option value="5">周五</option>
+                        <option value="6">周六</option>
+                        <option value="7">周日</option>
                     </select>
-                </form>
             </div>
             <p>自习去哪儿：</p>
             <div class="choose">
@@ -56,7 +56,7 @@
                         <option value="4">外语楼</option>
                         <option value="5">经管楼</option>
                     </select>
-                    <button type="submit" id="button" class="btn btn-primary" style="display:block; margin: 50px auto;width: 50%;">选好了</button>
+                    <button type="submit" id="button" class="btn btn-primary" style="display:block; margin: 20px auto;width: 50%;">选好了</button>
                 </form>
             </div>
         </div>
