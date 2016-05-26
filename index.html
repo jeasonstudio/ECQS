@@ -12,7 +12,7 @@
 
 <body>
     <div class="logo">
-            <img src="asset/logo.png" class="ustblogo">
+            <a href="http://www.ustbsu.cn/"><img src="asset/logo.png" class="ustblogo"></a>
         </div>
         <div class="container">
         <h2>北京科技大学<br/>无课教室查询系统</h2>
@@ -37,24 +37,29 @@
                         <option value="16">第十六周</option>
                     </select>
                     <select id="classTwo" onchange="changeday()" class="form-control" style="width: 40%; margin: auto;height:50px;font-size:20px;">
+                        <option value="0">周日</option>                       
                         <option value="1">周一</option>
                         <option value="2">周二</option>
                         <option value="3">周三</option>
                         <option value="4">周四</option>
                         <option value="5">周五</option>
                         <option value="6">周六</option>
-                        <option value="7">周日</option>
                     </select>
             </div>
             <p>自习去哪儿：</p>
             <div class="choose">
                 <form>
                     <select id="class" onchange="change()" class="form-control" style="width: 50%; margin: 10px auto;height:60px;font-size:24px;">
-                        <option value="1" selected="selected">逸夫楼</option>
-                        <option value="2">教学楼</option>
-                        <option value="3">机电楼</option>
-                        <option value="4">外语楼</option>
-                        <option value="5">经管楼</option>
+                        <option value="YIFU" selected="selected">逸夫楼</option>
+                        <option value="JIAOXUE">教学楼</option>
+                        <option value="JIDIAN">机电楼</option>
+                        <option value="WAIYU">外语楼</option>
+                        <option value="JINGGUAN">经管楼</option>
+                        <option value=" TUHUAN">土环楼</option>
+                        <option value="GAOGONG">高工楼</option>
+                        <option value="YEJIN">冶金楼</option>
+                        <option value="ZHU">主楼</option>
+                        <option value="SHIYAN">实验楼</option>
                     </select>
                     <button type="submit" id="button" class="btn btn-primary" style="display:block; margin: 20px auto;width: 50%;">选好了</button>
                 </form>
@@ -62,7 +67,7 @@
         </div>
     </div>
     
-    
+    <div class="charu"></div>
 </body>
 <footer>
     <p class="copyright"> &copy; 2016, insolently by <a href="http://www.abowloflrf.com" target="_blank" class="cpyright-link">abowloflrf</a> & <a href="http://jeasonstudio.github.io" target="_blank" class="cpyright-link">Jeason</a></p>

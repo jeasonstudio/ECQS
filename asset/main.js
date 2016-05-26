@@ -2,9 +2,9 @@
     function change() {
         var selectObj = document.getElementById('class');
         var selectvalue = selectObj.value;
-        var selecttext = selectObj.options[selectvalue-1].text;
+        /*var selecttext = selectObj.options[selectvalue-1].text;*/
         //alert("You have chose "+selectvalue+ selecttext);
-        var bulid = selecttext;
+        var bulid = selectvalue;
         return bulid;
     }
     
@@ -23,6 +23,7 @@
         var selecttext = selectObj.options[selectvalue-1].text;
         var resa = changeweek();
         //alert("You have chose "+ resa + selecttext);
+        return resa;
     }
     
     
@@ -58,14 +59,42 @@
         return (week-9);
     }
 
-    $("#button").bind("click",function () {
+    $("#button").bind("click",subclickalert)
+    
+    $("#button").bind("click",function (){
+        var Week = $("#classOne").val();
+        var Day = $("#classTwo").val();
+        var Bulid=change;
+        $.ajax({
+            type: "GET",
+            url: "http://jeason.abowloflrf.com/ecq/main.php", //这里写的是 php 文件的 url
+            data: {
+                week : "1",
+                day : "2",
+                buliding : "3"
+            },//要发送的数据（参数）
+            dataType: "JSON",
+            success: function (data){
+                alert("U Success!");
+                
+            },
+            error: function(){
+                alert("Some error!");
+            },
+            complete: function(){
+                window.open("http://jeason.abowloflrf.com/ecq/results.html");
+            }
+        });
+    });
+    
+    function subclickalert() {          //点确定是弹窗测试
         var week = $("#classOne").val();
         var day = $("#classTwo").val();
         var bulid = change();
-        alert("你选的时间是第" + week + "周的周" + day + "，你选择的楼是" + bulid);
-    });
+        alert("你选的时间是第" + week + "周的周" + day + "，你选择的楼是" + bulid + "BULIDING");
+    }
     
-    $(document).ready(
+    $(document).ready(              //页面加载时自动选择当天
         function ChangeTimeWhenReady() {
         var myDate = new Date();
         var year = myDate.getFullYear();
@@ -77,3 +106,5 @@
         $("#classOne").val(weekforyear);
         $("#classTwo").val(weekday);
     });
+    
+    
