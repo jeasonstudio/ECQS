@@ -11,4 +11,5 @@
 		echo "slect failed";
 	}
 	mysql_close($con);
+	
 ?>
